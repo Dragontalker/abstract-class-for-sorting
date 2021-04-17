@@ -9,4 +9,4 @@ var Sorter = /** @class */ (function () {
 }());
 var sorter = new Sorter([10, 3, -5, 0]);
 sorter.sort();
-console.log(sorter);
+console.log(sorter.collection);
