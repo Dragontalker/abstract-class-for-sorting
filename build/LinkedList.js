@@ -14,17 +14,14 @@ var LinkedList = /** @class */ (function () {
     }
     LinkedList.prototype.add = function (data) {
         var node = new Node(data);
-        // If there is no Node in head, use it as first element in head.
         if (!this.head) {
             this.head = node;
             return;
         }
-        // Loop untill the tail.next property is null.
         var tail = this.head;
         while (tail.next) {
             tail = tail.next;
         }
-        // Link the new Node to the end of linked list.
         tail.next = node;
     };
     Object.defineProperty(LinkedList.prototype, "length", {
@@ -66,7 +63,7 @@ var LinkedList = /** @class */ (function () {
     };
     LinkedList.prototype.swap = function (leftIndex, rightIndex) {
         var leftNode = this.at(leftIndex);
-        var rightNode = this.at(leftIndex);
+        var rightNode = this.at(rightIndex);
         var leftHand = leftNode.data;
         leftNode.data = rightNode.data;
         rightNode.data = leftHand;

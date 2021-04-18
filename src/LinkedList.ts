@@ -7,22 +7,19 @@ class Node {
 export class LinkedList {
   head: Node | null = null;
 
-  add(data: number) : void {
+  add(data: number): void {
     const node = new Node(data);
 
-    // If there is no Node in head, use it as first element in head.
     if (!this.head) {
       this.head = node;
       return;
     }
 
-    // Loop untill the tail.next property is null.
     let tail = this.head;
-    while(tail.next) {
-      tail = tail.next
+    while (tail.next) {
+      tail = tail.next;
     }
 
-    // Link the new Node to the end of linked list.
     tail.next = node;
   }
 
@@ -48,7 +45,7 @@ export class LinkedList {
 
     let counter = 0;
     let node: Node | null = this.head;
-    while(node) {
+    while (node) {
       if (counter === index) {
         return node;
       }
@@ -62,7 +59,7 @@ export class LinkedList {
 
   compare(leftIndex: number, rightIndex: number): boolean {
     if (!this.head) {
-      throw new Error('List is empty')
+      throw new Error('List is empty');
     }
 
     return this.at(leftIndex).data > this.at(rightIndex).data;
@@ -70,7 +67,7 @@ export class LinkedList {
 
   swap(leftIndex: number, rightIndex: number): void {
     const leftNode = this.at(leftIndex);
-    const rightNode = this.at(leftIndex);
+    const rightNode = this.at(rightIndex);
 
     const leftHand = leftNode.data;
     leftNode.data = rightNode.data;
@@ -81,7 +78,7 @@ export class LinkedList {
     if (!this.head) {
       return;
     }
-    
+
     let node: Node | null = this.head;
     while (node) {
       console.log(node.data);
@@ -89,3 +86,4 @@ export class LinkedList {
     }
   }
 }
+
