@@ -4,4 +4,6 @@ class Node {
   constructor(public data: number) {}
 }
 
-export class LinkedList {}
+export class LinkedList {
+  head: Node | null = null;
+}

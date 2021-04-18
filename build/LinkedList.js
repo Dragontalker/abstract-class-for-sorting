@@ -10,6 +10,7 @@ var Node = /** @class */ (function () {
 }());
 var LinkedList = /** @class */ (function () {
     function LinkedList() {
+        this.head = null;
     }
     return LinkedList;
 }());
