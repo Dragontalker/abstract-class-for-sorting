@@ -1,6 +1,7 @@
 "use strict";
 var Node = /** @class */ (function () {
-    function Node() {
+    function Node(data) {
+        this.data = data;
     }
     return Node;
 }());

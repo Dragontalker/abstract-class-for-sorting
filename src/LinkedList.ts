@@ -1,1 +1,3 @@
-class Node {}
+class Node {
+  constructor(public data: number) {}
+}
