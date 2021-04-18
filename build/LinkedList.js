@@ -64,6 +64,13 @@ var LinkedList = /** @class */ (function () {
         }
         return this.at(leftIndex).data > this.at(rightIndex).data;
     };
+    LinkedList.prototype.swap = function (leftIndex, rightIndex) {
+        var leftNode = this.at(leftIndex);
+        var rightNode = this.at(leftIndex);
+        var leftHand = leftNode.data;
+        leftNode.data = rightNode.data;
+        rightNode.data = leftHand;
+    };
     return LinkedList;
 }());
 exports.LinkedList = LinkedList;
