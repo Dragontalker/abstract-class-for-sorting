@@ -5,6 +5,7 @@ var Sorter = /** @class */ (function () {
     }
     Sorter.prototype.sort = function () {
         var length = this.collection.length;
+        // If collection is an array of numbers
         for (var i = 0; i < length; i++) {
             for (var j = 0; j < length - i - 1; j++) {
                 if (this.collection[j] > this.collection[j + 1]) {
@@ -14,6 +15,8 @@ var Sorter = /** @class */ (function () {
                 }
             }
         }
+        // If collection is a string, do this logic instead:
+        // ~~~logic to compare and swap characters in a string
     };
     return Sorter;
 }());
