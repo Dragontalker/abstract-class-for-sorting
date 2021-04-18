@@ -1,4 +1,4 @@
-export class NumbersCollection {
+export class CharactersCollection {
   constructor(public data: string) {}
 
   get length(): number {
