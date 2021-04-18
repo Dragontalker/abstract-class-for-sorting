@@ -25,4 +25,19 @@ export class LinkedList {
     // Link the new Node to the end of linked list.
     tail.next = node;
   }
+
+  get length(): number {
+    if (!this.head) {
+      return 0;
+    }
+
+    let length = 1;
+    let node = this.head;
+    while (node.next) {
+      length++;
+      node = node.next;
+    }
+
+    return length;
+  }
 }

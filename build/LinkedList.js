@@ -27,6 +27,22 @@ var LinkedList = /** @class */ (function () {
         // Link the new Node to the end of linked list.
         tail.next = node;
     };
+    Object.defineProperty(LinkedList.prototype, "length", {
+        get: function () {
+            if (!this.head) {
+                return 0;
+            }
+            var length = 1;
+            var node = this.head;
+            while (node.next) {
+                length++;
+                node = node.next;
+            }
+            return length;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return LinkedList;
 }());
 exports.LinkedList = LinkedList;
