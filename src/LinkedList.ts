@@ -3,3 +3,5 @@ class Node {
 
   constructor(public data: number) {}
 }
+
+export class LinkedList {}
