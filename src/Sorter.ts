@@ -1,5 +1,7 @@
+import { NumbersCollection } from './NumbersCollection';
+
 export class Sorter {
-  constructor(public collection: /*TODO: Fix me!*/) {}
+  constructor(public collection: NumbersCollection) {}
 
   sort(): void {
     const { length } = this.collection;
